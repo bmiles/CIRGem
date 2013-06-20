@@ -7,12 +7,12 @@ class Chemical
   
   def initialize(name, stdinchikey=nil, smiles=nil)
     @name = name
-    @stdinchikey = stdinchikey
-    @smiles = smiles
+    @stdinchikey = name_to_stdinchikey()
+    @smiles = name_to_smiles()
   end
 
   def name_to_stdinchikey()
-    response = self.class.get("/#{@structure_identifier.gsub(/\s+/, "")}/stdinchikey")
+    response = self.class.get("/#{@name.gsub(/\s+/, "")}/stdinchikey")
     if response.parsed_response =~ /.*=(.*)/
       @stdinchikey = $1
     else
@@ -21,7 +21,7 @@ class Chemical
   end
   
   def name_to_smiles()
-    response = self.class.get("/#{@structure_identifier.gsub(/\s+/, "")}/smiles")
+    response = self.class.get("/#{@name.gsub(/\s+/, "")}/smiles")
     @smiles = response.parsed_response
   end
   
