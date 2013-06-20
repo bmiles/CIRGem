@@ -22,12 +22,11 @@ TODO: Write usage instructions here
 
 Example:
 
-aspirin = Chemical.new('aspirin')
+    aspirin = Chemical.new('aspirin')
 
 This generates the object class Chemical with the variables @name, @stdinchikey, @smiles
 
-The ID keys and SMILES representation of the molecule are generated automatically by calling to the CIR 
-<a href="http://cactus.nci.nih.gov/chemical/structure">
+The ID keys and SMILES representation of the molecule are generated automatically by calling to the CIR http://cactus.nci.nih.gov/chemical/structure
 
 ## Contributing
 
