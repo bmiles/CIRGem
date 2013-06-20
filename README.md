@@ -1,6 +1,6 @@
 # CIRGem
 
-TODO: Write a gem description
+Creates Chemical class, when chemicals are initialized by name ID keys such as StdInChIKey and SMILES are auto-populated from CIR.
 
 ## Installation
 
@@ -19,6 +19,15 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+
+Example:
+
+aspirin = Chemical.new('aspirin')
+
+This generates the object class Chemical with the variables @name, @stdinchikey, @smiles
+
+The ID keys and SMILES representation of the molecule are generated automatically by calling to the CIR 
+<a href="http://cactus.nci.nih.gov/chemical/structure">
 
 ## Contributing
 
